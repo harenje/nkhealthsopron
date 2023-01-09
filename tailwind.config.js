@@ -16,6 +16,7 @@ module.exports = {
         "hero-pattern_1280":
           "url('../public/images/background_1_1280x720.jpg')",
         rolunk: "url('../public/images/feature2.jpg')",
+        sablonLogo: "url(../public/images/nk_sablon_ikon2.jpg)",
       },
       colors: {
         "nk-white": "#EDEDED",
