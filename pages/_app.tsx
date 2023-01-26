@@ -1,3 +1,6 @@
+import React from "react";
+import { UserProvider } from "@auth0/nextjs-auth0/client";
+
 // Font import
 import { Roboto } from "@next/font/google";
 
@@ -13,7 +16,9 @@ const roboto = Roboto({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <main className={`${roboto.variable} font-sans`}>
-      <Component {...pageProps} />
+      <UserProvider>
+        <Component {...pageProps} />
+      </UserProvider>
     </main>
   );
 }

@@ -10,7 +10,7 @@ const Arak = () => {
           <h1 className="text-4xl font-bold text-nk-white uppercase mb-2">
             áraink
           </h1>
-          <hr className="border-nk-red border-solid border-2 rounded-md w-36" />
+          <hr className="border-nk-red border-solid border-2 rounded-md w-20" />
           <h2 className="uppercase text-2xl text-nk-white tracking-widest mt-5">
             a legjobb verziód itt készül
           </h2>
@@ -24,7 +24,7 @@ const Arak = () => {
           <hr className="border-nk-red border-solid border-2 rounded-md w-36 mt-2" />
         </div>
         <div className="container mx-auto flex justify-between mt-5 text-nk-black tracking-widest">
-          <div className="w-1/3 bg-sablonLogo rounded-md flex flex-col items-center">
+          <div className="w-1/3 bg-white rounded-md flex flex-col items-center">
             <h2 className="uppercase  font-semibold p-2">személyi edzés</h2>
             <h1 className="uppercase text-xl font-extrabold mb-1 py-3">
               egyéni
@@ -47,7 +47,7 @@ const Arak = () => {
               </p>
             </div>
           </div>
-          <div className="w-1/3 bg-sablonLogo rounded-md flex flex-col items-center">
+          <div className="w-1/3 bg-white rounded-md flex flex-col items-center">
             <h2 className="uppercase  font-semibold p-2">személyi edzés</h2>
             <h1 className="uppercase text-xl font-extrabold mb-1 py-3">
               páros

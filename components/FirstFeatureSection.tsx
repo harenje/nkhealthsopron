@@ -1,4 +1,5 @@
 import Button from "./Button";
+import Link from "next/link";
 
 export default function FirstFeatureSection() {
   return (
@@ -20,7 +21,9 @@ export default function FirstFeatureSection() {
           mindezeket lendületesen és vidám hangulatban.
         </span>
         <div className="self-start">
-          <Button>edzőink</Button>
+          <Link href="/edzok">
+            <Button>edzőink</Button>
+          </Link>
         </div>
       </div>
     </div>
