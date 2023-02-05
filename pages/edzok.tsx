@@ -1,6 +1,9 @@
+import { useState } from "react";
+
 import Navbar from "../components/Navbar";
 import Image from "next/image";
 import Footer from "../components/Footer";
+import Button from "../components/Button";
 
 const Edzok = () => {
   return (
@@ -141,8 +144,14 @@ interface EdzoProps {
 
 export default Edzok;
 function Edzo(props: EdzoProps) {
+  const [infoToggler, setInfoToggler] = useState(false);
+
+  const infoToggleHandler = () => {
+    setInfoToggler(!infoToggler);
+  };
+
   return (
-    <div className="flex flex-col basis-1/2 pb-10 relative group">
+    <div className="flex flex-col basis-1/2 pb-10 relative">
       <Image
         src={props.image}
         alt={props.alt}
@@ -151,7 +160,11 @@ function Edzo(props: EdzoProps) {
         className="rounded-xl"
       ></Image>
 
-      <div className="bg-nk-grey rounded-xl opacity-0 group-active:bg-opacity-75 group-active:opacity-100 group-active:transition-all group-active:delay-100 group-active:duration-300 absolute top-1 left-2 right-2 p-2 flex flex-col gap-1">
+      <div
+        className={`bg-nk-grey rounded-xl ${
+          infoToggler ? "opacity-0" : "opacity-100"
+        } absolute top-1 left-2 right-2 p-2 flex flex-col gap-1`}
+      >
         {props.description}
       </div>
 
