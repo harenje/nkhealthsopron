@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import Navbar from "../components/Navbar";
 import Image from "next/image";
@@ -144,26 +144,29 @@ interface EdzoProps {
 
 export default Edzok;
 function Edzo(props: EdzoProps) {
-  const [infoToggler, setInfoToggler] = useState(false);
+    
+const [infoToggler, setInfoToggler] = useState(false)
 
-  const infoToggleHandler = () => {
+const infoToggleHandler = () => {
     setInfoToggler(!infoToggler);
-  };
+};
 
   return (
     <div className="flex flex-col basis-1/2 pb-10 relative">
-      <Image
-        src={props.image}
-        alt={props.alt}
-        width={400}
-        height={400}
-        className="rounded-xl"
-      ></Image>
-
+    
+       <Image
+            src={props.image}
+            alt={props.alt}
+            width={400}
+            height={400}
+            className="rounded-xl"
+        ></Image>
+        <div className="mt-1"><Button onClick={infoToggleHandler}>Személyes leírás</Button></div>
+        
       <div
         className={`bg-nk-grey rounded-xl ${
-          infoToggler ? "opacity-0" : "opacity-100"
-        } absolute top-1 left-2 right-2 p-2 flex flex-col gap-1`}
+          infoToggler ? "opacity-80" : "hidden"
+        } absolute top-1 left-2 right-2 p-0.5 flex flex-col gap-1`}
       >
         {props.description}
       </div>
