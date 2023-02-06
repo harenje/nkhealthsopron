@@ -1,5 +1,6 @@
 import Navbar from "../Navbar";
 import Button from "../Button";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -16,7 +17,9 @@ export default function Hero() {
           </h1>
         </div>
         <div className="ml-2.5">
-          <Button>kezdd el most</Button>
+          <Link href="/bejelentkezes">
+            <Button>kezdd el most</Button>
+          </Link>
         </div>
       </section>
     </>

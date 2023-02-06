@@ -16,6 +16,7 @@ module.exports = {
         "hero-pattern_1280":
           "url('../public/images/background_1_1280x720.jpg')",
         rolunk: "url('../public/images/feature2.jpg')",
+        bejelentkezes: "url('../public/images/bejelentkezes.jpg')",
       },
       colors: {
         "nk-white": "#EDEDED",

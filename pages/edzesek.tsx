@@ -11,7 +11,7 @@ const Edzesek = () => {
           <h1 className="text-4xl uppercase text-nk-white font-bold">
             edzések
           </h1>
-          <hr className="border-nk-red border-solid rounded-md w-36" />
+          <hr className="border-nk-red border-solid border-2 rounded-md w-24" />
         </div>
         <div className="flex">
           <div className="hidden lg:block">

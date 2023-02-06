@@ -11,7 +11,9 @@ export default function Footer() {
             készen állsz a változásra?
           </div>
           <div className="z-30">
-            <Button>bejelentkezes edzésre</Button>
+            <Link href="/bejelentkezes">
+              <Button>bejelentkezes edzésre</Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -23,9 +25,24 @@ export default function Footer() {
         </div>
         <div className="flex flex-col self-center pr-8 gap-6 md:self-auto">
           <h1 className="text-4xl">Információ</h1>
-          <Link href="/aszf">ászf</Link>
-          <Link href="/hazirend">házirend</Link>
-          <Link href="/gyik">gyik</Link>
+          <Link
+            href="/aszf"
+            className="transition-all hover:scale-y-110 duration-300 delay-100"
+          >
+            ászf
+          </Link>
+          <Link
+            href="/hazirend"
+            className="transition-all hover:scale-y-110 duration-300 delay-100"
+          >
+            házirend
+          </Link>
+          <Link
+            href="/gyik"
+            className="transition-all hover:scale-y-110 duration-300 delay-100"
+          >
+            gyik
+          </Link>
         </div>
         <div className="flex flex-col self-center gap-6 md:self-auto">
           <h1 className="text-4xl">Elérhetőségek</h1>
@@ -75,6 +92,7 @@ export default function Footer() {
                 alt="Map Icon"
                 width={32}
                 height={32}
+                className="transition-all hover:scale-150 duration-300 delay-100"
               />
             </a>
             <a
@@ -87,6 +105,7 @@ export default function Footer() {
                 alt="Map Icon"
                 width={32}
                 height={32}
+                className="transition-all hover:scale-150 duration-300 delay-100"
               />
             </a>
             <Image
@@ -94,6 +113,7 @@ export default function Footer() {
               alt="Map Icon"
               width={32}
               height={32}
+              className="transition-all hover:scale-150 duration-300 delay-100"
             />
           </div>
         </div>

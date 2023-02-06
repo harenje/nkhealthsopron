@@ -1,5 +1,6 @@
 import Button from "./Button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SecondFeatureSection() {
   return (
@@ -13,7 +14,9 @@ export default function SecondFeatureSection() {
         összeállításával is foglalkozunk.
       </div>
       <div className="container mx-auto z-40 text-nk-white p-5 md:p-0">
-        <Button>edzések</Button>
+        <Link href="/edzesek">
+          <Button>edzések</Button>
+        </Link>
       </div>
       <Image
         src="/../public/images/nk_sablon_ikon.png"
