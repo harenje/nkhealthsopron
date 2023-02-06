@@ -15,7 +15,7 @@ export default function SecondFeatureSection() {
       </div>
       <div className="container mx-auto z-40 text-nk-white p-5 md:p-0">
         <Link href="/edzesek">
-          <Button>edzések</Button>
+          <Button onClick={()=>void{}}>edzések</Button>
         </Link>
       </div>
       <Image

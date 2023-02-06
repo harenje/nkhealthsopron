@@ -12,7 +12,7 @@ export default function Footer() {
           </div>
           <div className="z-30">
             <Link href="/bejelentkezes">
-              <Button>bejelentkezes edzésre</Button>
+              <Button onClick={()=>void{}}>bejelentkezes edzésre</Button>
             </Link>
           </div>
         </div>

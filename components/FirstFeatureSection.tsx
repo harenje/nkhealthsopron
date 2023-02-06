@@ -22,7 +22,7 @@ export default function FirstFeatureSection() {
         </span>
         <div className="self-start">
           <Link href="/edzok">
-            <Button>edzőink</Button>
+            <Button onClick={()=>void{}}>edzőink</Button>
           </Link>
         </div>
       </div>
