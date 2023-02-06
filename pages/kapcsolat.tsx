@@ -51,7 +51,7 @@ const Kapcsolat = () => {
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
-              src={`https://www.google.com/maps/embed/v1/place?key=${process.env.API_KEY_GOOGLE}=NK+Health+%26+Sport+Studio}`}
+              src={`https://www.google.com/maps/embed/v1/place?key=${process.env.API_KEY_GOOGLE}`}
             ></iframe>
           </div>
         </div>
