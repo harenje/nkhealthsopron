@@ -18,7 +18,7 @@ export default function Hero() {
         </div>
         <div className="ml-2.5">
           <Link href="/bejelentkezes">
-            <Button>kezdd el most</Button>
+            <Button onClick={()=>void{}}>kezdd el most</Button>
           </Link>
         </div>
       </section>
