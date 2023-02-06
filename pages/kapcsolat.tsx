@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Image from "next/image";
 
+
 const Kapcsolat = () => {
   return (
     <>
@@ -50,7 +51,7 @@ const Kapcsolat = () => {
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBRyXYYF2SFztm29XRgxF3hnJ7W6p617P8&q=NK+Health+%26+Sport+Studio"
+              src={`https://www.google.com/maps/embed/v1/place?key=${process.env.API_KEY_GOOGLE}=NK+Health+%26+Sport+Studio}`}
             ></iframe>
           </div>
         </div>
