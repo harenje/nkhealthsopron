@@ -4,6 +4,7 @@ import Image from "next/image";
 
 
 const Kapcsolat = () => {
+
   return (
     <>
       <section className="bg-nk-black h-full">
@@ -51,7 +52,7 @@ const Kapcsolat = () => {
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
-              src={`https://www.google.com/maps/embed/v1/place?key=${process.env.API_KEY_GOOGLE}`}
+              src={process.env.NEXT_PUBLIC_API_KEY_GOOGLE}
             ></iframe>
           </div>
         </div>
