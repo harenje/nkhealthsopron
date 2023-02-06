@@ -58,7 +58,7 @@ const Bejelentkezes: NextPage = () => {
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-nk-grey leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
-            <Button>Belépés</Button>
+            <Button onClick={()=>void}>Belépés</Button>
           </form>
         </div>
       </section>
