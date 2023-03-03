@@ -15,7 +15,6 @@ module.exports = {
         "hero-pattern_768": "url('../public/images/background_1_768x1024.jpg')",
         rolunk_bg: "url('../public/images/feature2bg.jpg')",
         rolunk_2048: "url('../public/images/feature2.jpg')",
-        rolunk_768: "url('../public/images/feature2_768.jpg')",
         rolunk_second: "url('../public/images/feature2_2nd.jpg')",
         bejelentkezes: "url('../public/images/bejelentkezes.jpg')",
         training_gif: "url(../public/images/training_gif.gif')",
