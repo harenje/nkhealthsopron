@@ -42,7 +42,7 @@ const Edzesek = () => {
                 </p>
               </div>
               <Image
-                src="/../public/images/edzesekkep.jpg"
+                src="/../public/static/images/edzesekkep.jpg"
                 alt="Trainer with Client"
                 width={700}
                 height={700}
@@ -54,7 +54,7 @@ const Edzesek = () => {
             </div>
             <div className="flex flex-col-reverse xl:flex-row xl:items-center mt-5 mb-2">
               <Image
-                src="/../public/images/edzeskkep2.jpg"
+                src="/../public/static/images/edzeskkep2.jpg"
                 alt="Trainer with Client"
                 width={700}
                 height={700}

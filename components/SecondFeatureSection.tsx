@@ -23,7 +23,7 @@ export default function SecondFeatureSection() {
       exit="exit"
     >
       <Image
-        src="/../public/images/training_gif.gif"
+        src="/../public/static/images/training_gif.gif"
         width={4500}
         height={4000}
         alt="Training Video"

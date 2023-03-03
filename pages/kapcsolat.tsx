@@ -39,7 +39,7 @@ const Kapcsolat = () => {
               }}
             >
               <Image
-                src="/../public/images/house.ico"
+                src="/../public/static/images/house.ico"
                 alt="House symbol"
                 width={32}
                 height={32}
@@ -58,7 +58,7 @@ const Kapcsolat = () => {
               }}
             >
               <Image
-                src="/../public/images/phone.ico"
+                src="/../public/static/images/phone.ico"
                 alt="House symbol"
                 width={32}
                 height={32}
@@ -77,7 +77,7 @@ const Kapcsolat = () => {
               }}
             >
               <Image
-                src="/../public/images/map.ico"
+                src="/../public/static/images/map.ico"
                 alt="House symbol"
                 width={32}
                 height={32}

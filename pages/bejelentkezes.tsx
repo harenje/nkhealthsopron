@@ -120,7 +120,7 @@ const Bejelentkezes: NextPage = () => {
           <h1 className="text-2xl md:text-3xl">Elérhetőségek</h1>
           <div className="text-sm md:text-lg xl:text-xl relative">
             <Image
-              src="/../public/images/map.ico"
+              src="/../public/static/images/map.ico"
               alt="Map Icon"
               width={32}
               height={32}
@@ -130,7 +130,7 @@ const Bejelentkezes: NextPage = () => {
           </div>
           <div className="text-sm md:text-lg xl:text-xl relative">
             <Image
-              src="/../public/images/phone.ico"
+              src="/../public/static/images/phone.ico"
               alt="Map Icon"
               width={32}
               height={32}
@@ -144,7 +144,7 @@ const Bejelentkezes: NextPage = () => {
           </div>
           <div className="text-sm md:text-lg xl:text-xl relative">
             <Image
-              src="/../public/images/email.ico"
+              src="/../public/static/images/email.ico"
               alt="Map Icon"
               width={32}
               height={32}
@@ -165,7 +165,7 @@ const Bejelentkezes: NextPage = () => {
               target={"_blank"}
             >
               <Image
-                src="/../public/images/facebook.ico"
+                src="/../public/static/images/facebook.ico"
                 alt="Map Icon"
                 width={32}
                 height={32}
@@ -178,7 +178,7 @@ const Bejelentkezes: NextPage = () => {
               target={"_blank"}
             >
               <Image
-                src="/../public/images/instagram.ico"
+                src="/../public/static/images/instagram.ico"
                 alt="Map Icon"
                 width={32}
                 height={32}
@@ -186,7 +186,7 @@ const Bejelentkezes: NextPage = () => {
               />
             </a>
             <Image
-              src="/../public/images/tiktok.ico"
+              src="/../public/static/images/tiktok.ico"
               alt="Map Icon"
               width={32}
               height={32}
