@@ -54,7 +54,7 @@ const Edzok = () => {
                   <span> 📩 nkhss2022@gmail.com</span>
                 </>
               }
-              image={"../public/static/images/Kevin.jpg"}
+              image={"/../public/static/images/Kevin.jpg"}
               name="Varga Kevin"
               role="személyi edző"
             />
@@ -79,7 +79,7 @@ const Edzok = () => {
                   <span> 📩 nkhss2022@gmail.com</span>
                 </>
               }
-              image={"../public/static/images/Norbi.jpg"}
+              image={"/../public/static/images/Norbi.jpg"}
               name="Baranyai Norbert"
               role="személyi edző"
             />
@@ -108,7 +108,7 @@ const Edzok = () => {
                   </span>
                 </>
               }
-              image={"../public/static/images/Adrienn.jpg"}
+              image={"/../public/static/images/Adrienn.jpg"}
               name="Ivancsics Adrienn"
               role="személyi edző"
             />
@@ -136,7 +136,7 @@ const Edzok = () => {
                   </span>
                 </>
               }
-              image={"../public/static/images/Judit.jpg"}
+              image={"/../public/static/images/Judit.jpg"}
               name="Palotai-Fodor Judit"
               role="személyi edző"
             />
