@@ -178,7 +178,7 @@ function Edzo(props: EdzoProps) {
         height={400}
         className="rounded-xl"
       ></Image>
-      <div className="mt-1 z-100">
+      <div className="mt-1 z-50">
         <Button onClick={infoToggleHandler}>Személyes leírás</Button>
       </div>
 
