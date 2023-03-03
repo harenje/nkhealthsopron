@@ -11,12 +11,12 @@ module.exports = {
       screens: {},
       backgroundImage: {
         logo_image: "url('/images/middle3.jpg')",
-        "hero-pattern_2048": "url('/images/background.png')",
-        "hero-pattern_768": "url('/images/background_1_768x1024.png')",
+        "hero-pattern_2048": "url('/images/background.jpeg')",
+        "hero-pattern_768": "url('/images/background_1_768x1024.jpeg')",
         rolunk_bg: "url('/images/feature2bg.jpg')",
         rolunk_second: "url('/images/feature2_2nd.jpg')",
-        bejelentkezes: "url('/images/bejelentkezes.jpg')",
-        training_gif: "url('/images/training_gif.gif')",
+        bejelentkezes: "url('/images/bejelentkezes.jpeg')",
+        training_gif: "url('/images/training_gif.mp4')",
       },
       colors: {
         "nk-white": "#EDEDED",
