@@ -1,5 +1,8 @@
 import React from "react";
-import { UserProvider } from "@auth0/nextjs-auth0/client";
+import { useScrollRestoration } from "../hooks/useScrollRestoration";
+
+// Framer - motion
+import { AnimatePresence } from "framer-motion";
 
 // Font import
 import { Roboto } from "@next/font/google";
@@ -13,12 +16,13 @@ const roboto = Roboto({
   variable: "--font-roboto",
 });
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps, router }: AppProps) {
+  useScrollRestoration(router);
   return (
     <main className={`${roboto.variable} font-sans`}>
-      <UserProvider>
-        <Component {...pageProps} />
-      </UserProvider>
+      <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
+        <Component {...pageProps} key={router.asPath} />
+      </AnimatePresence>
     </main>
   );
 }

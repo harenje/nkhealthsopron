@@ -6,6 +6,7 @@ import { FiXSquare } from "react-icons/fi";
 
 import Link from "next/link";
 import Image from "next/image";
+import { AnimatePresence, motion, Variants } from "framer-motion";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -19,6 +20,14 @@ export default function Navbar() {
       : (document.body.style.overflow = "scroll");
   });
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, [open]);
+
   const breakpoint = 1024;
   const width = useScreenSize();
 
@@ -30,6 +39,12 @@ export default function Navbar() {
     return setOpen(!open), (document.body.style.overflow = "scroll");
   };
 
+  const hamburgerVariants: Variants = {
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, x: "-100%" },
+    exit: { opacity: 0, x: "-100%" },
+  };
+
   return (
     <>
       {/* // Navbar */}
@@ -38,13 +53,18 @@ export default function Navbar() {
         <div className="flex items-center justify-between md:mr-2">
           {/* Logo */}
           <Link href="/">
-            <Image
-              src="/images/logofeher.png"
-              height={144}
-              width={144}
-              alt="Brand Logo"
-              className="transition-all hover:scale-150 duration-300 delay-100"
-            ></Image>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 350 }}
+            >
+              <Image
+                src="/images/logofeher.png"
+                height={144}
+                width={144}
+                alt="Brand Logo"
+                className="2xl:scale-125 transition-all duration-300 delay-100"
+              ></Image>
+            </motion.div>
           </Link>
           {/* Hamburger Icon */}
           {!open ? (
@@ -57,14 +77,16 @@ export default function Navbar() {
             />
           ) : (
             <FiXSquare
-              className="transition-all duration-300 delay-100 hover:scale-150 mr-2.5 block lg:hidden z-10 cursor-pointer"
+              className="transition-all duration-300 delay-100 hover:scale-150 mr-2.5 block lg:hidden z-10 cursor-pointer z-50"
               size="2.5em"
-              onClick={() => enableScrollFunc()}
+              onClick={() => {
+                enableScrollFunc();
+              }}
             />
           )}
           {/*Menu Items */}
           {width >= breakpoint && (
-            <div className="hidden lg:space-x-32 lg:flex lg:flex-row lg:mt-0 lg:mr-0">
+            <div className="hidden 2xl:text-xl lg:space-x-32 lg:flex lg:flex-row lg:mt-0 lg:mr-0">
               <Link
                 href="/edzesek"
                 className="transition-all hover:scale-150 duration-300"
@@ -104,46 +126,60 @@ export default function Navbar() {
         </div>
       </nav>
       {/*Mobile view */}
-      {open && width <= breakpoint && (
-        <div className="absolute top-0 left-0 w-full h-full bg-nk-black text-nk-white text-6xl flex justify-center content-start opacity-95">
-          <nav className="flex flex-col justify-center gap-20 h-full">
-            <Link
-              href="/edzesek"
-              className="transition-all hover:scale-y-110 duration-300 delay-100"
+      <AnimatePresence>
+        {open && width <= breakpoint && (
+          <motion.div
+            className="absolute top-0 left-0 w-full h-full bg-nk-black text-nk-white text-4xl sm:text-5xl flex justify-center content-start opacity-95 overflow-hidden z-40"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.95 }}
+            transition={{ duration: 0.25 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.nav
+              className="flex flex-col justify-center gap-20 h-full"
+              initial="closed"
+              animate="open"
+              exit="exit"
+              variants={hamburgerVariants}
             >
-              Edzések
-            </Link>
+              <Link
+                href="/edzesek"
+                className="transition-all hover:scale-y-110 duration-300 delay-100"
+              >
+                Edzések
+              </Link>
 
-            <Link
-              href="/edzok"
-              className="transition-all hover:scale-y-110 duration-300 delay-100"
-            >
-              Edzők
-            </Link>
+              <Link
+                href="/edzok"
+                className="transition-all hover:scale-y-110 duration-300 delay-100"
+              >
+                Edzők
+              </Link>
 
-            <Link
-              href="/arak"
-              className="transition-all hover:scale-y-110 duration-300 delay-100"
-            >
-              Árak
-            </Link>
+              <Link
+                href="/arak"
+                className="transition-all hover:scale-y-110 duration-300 delay-100"
+              >
+                Árak
+              </Link>
 
-            <Link
-              href="/kapcsolat"
-              className="transition-all hover:scale-y-110 duration-300 delay-100"
-            >
-              Kapcsolat
-            </Link>
+              <Link
+                href="/kapcsolat"
+                className="transition-all hover:scale-y-110 duration-300 delay-100"
+              >
+                Kapcsolat
+              </Link>
 
-            <Link
-              href="/bejelentkezes"
-              className="transition-all hover:scale-y-110 duration-300 delay-100"
-            >
-              Bejelentkezés
-            </Link>
-          </nav>
-        </div>
-      )}
+              <Link
+                href="/bejelentkezes"
+                className="transition-all hover:scale-y-110 duration-300 delay-100"
+              >
+                Bejelentkezés
+              </Link>
+            </motion.nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }

@@ -1,39 +1,48 @@
 import Button from "./Button";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, Variants } from "framer-motion";
+
+const cardVariants: Variants = {
+  exit: {
+    x: 300,
+    opacity: 0,
+    transition: {
+      type: "spring",
+      stiffness: 360,
+      damping: 30,
+    },
+  },
+};
 
 export default function SecondFeatureSection() {
   return (
-    <section className="relative flex flex-col justify-center gap-5 h-screen -mb-80 sm:-mb-16 overflow-hidden">
-      <div className="relative z-30 container mx-auto text-2xl text-nk-white p-5 -mt-96 md:p-0">
-        <h1 className="uppercase text-4xl mb-5 font-bold">edzések</h1>
-        Minden nap edzések széles választékával várjuk a sportolni vágyókat.
-        <br />
-        <br />
-        Súlyzós edzések mellett, sportspecifikus egyéni edzésterv
-        összeállításával is foglalkozunk.
-      </div>
-      <div className="container mx-auto z-40 text-nk-white p-5 md:p-0">
-        <Link href="/edzesek">
-          <Button onClick={()=>void{}}>edzések</Button>
-        </Link>
-      </div>
+    <motion.section
+      className="bg-nk-black relative flex items-center justify-center overflow-hidden"
+      variants={cardVariants}
+      exit="exit"
+    >
       <Image
-        src="/../public/images/nk_sablon_ikon.png"
-        alt="Brand Secondary Logo"
-        width={560}
-        height={560}
-        className="absolute md:left-1/5 md:ml-20 md:mb-32 z-30"
+        src="/../public/images/training_gif.gif"
+        width={4500}
+        height={4000}
+        alt="Training Video"
       ></Image>
-      <video
-        autoPlay
-        loop
-        muted
-        className="absolute z-10 max-w-screen-lg -mt-96 sm:max-w-none"
+      <motion.div
+        className="bg-nk-black bg-opacity-75 w-full h-full absolute text-md top-0 left-0 text-xs md:text-sm lg:text-md xl:text-xl min-[1920px]:text-2xl flex flex-col justify-center items-center"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 0.8 }}
       >
-        <source src={require("../public/images/video.mp4")} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </section>
+        <div className="w-10/12 h-1/4 text-nk-white mb-16 md:mb-6 lg:mb-0 uppercase text-center">
+          A személyi edzőink segítenek Önnek megtalálni a legjobb edzéstervet
+          céljai eléréséhez. Ha bármilyen kérdése van az edzési módszerekről,
+          forduljon hozzánk bizalommal vagy kattintson az edzések gombra.
+        </div>
+        <Link href="/edzesek" scroll={false}>
+          <Button>edzések</Button>
+        </Link>
+      </motion.div>
+    </motion.section>
   );
 }

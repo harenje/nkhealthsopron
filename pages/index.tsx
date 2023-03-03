@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>
           Edzőterem & Személyi edzés Sopronban | NK Health & Sport stúdió
@@ -24,6 +24,6 @@ export default function Home() {
       <FirstFeatureSection />
       <SecondFeatureSection />
       <Footer />
-    </div>
+    </>
   );
 }
