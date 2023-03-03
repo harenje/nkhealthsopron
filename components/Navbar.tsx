@@ -77,7 +77,7 @@ export default function Navbar() {
             />
           ) : (
             <FiXSquare
-              className="transition-all duration-300 delay-100 hover:scale-150 mr-2.5 block lg:hidden z-10 cursor-pointer z-50"
+              className="transition-all duration-300 delay-100 hover:scale-150 mr-2.5 block lg:hidden cursor-pointer z-50"
               size="2.5em"
               onClick={() => {
                 enableScrollFunc();
