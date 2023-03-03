@@ -16,7 +16,7 @@ module.exports = {
         rolunk_bg: "url('/images/feature2bg.jpg')",
         rolunk_second: "url('/images/feature2_2nd.jpg')",
         bejelentkezes: "url('/images/bejelentkezes.jpeg')",
-        training_gif: "url('/images/training_gif.gif')",
+        training_gif: "url('/images/training_gif.mp4')",
       },
       colors: {
         "nk-white": "#EDEDED",
