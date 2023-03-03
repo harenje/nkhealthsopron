@@ -10,15 +10,14 @@ module.exports = {
     extend: {
       screens: {},
       backgroundImage: {
-        logo_image: "url('../public/static/images/middle3.jpg')",
-        "hero-pattern_2048": "url('../public/static/images/background.jpg')",
-        "hero-pattern_768":
-          "url('../public/static/images/background_1_768x1024.jpg')",
-        rolunk_bg: "url('../public/static/images/feature2bg.jpg')",
-        rolunk_2048: "url('../public/static/images/feature2.jpg')",
-        rolunk_second: "url('../public/static/images/feature2_2nd.jpg')",
-        bejelentkezes: "url('../public/static/images/bejelentkezes.jpg')",
-        training_gif: "url(../public/static/images/training_gif.gif')",
+        logo_image: "url('/images/middle3.jpg')",
+        "hero-pattern_2048": "url('/images/background.jpg')",
+        "hero-pattern_768": "url('/images/background_1_768x1024.jpg')",
+        rolunk_bg: "url('/images/feature2bg.jpg')",
+        rolunk_2048: "url('/images/feature2.jpg')",
+        rolunk_second: "url('/images/feature2_2nd.jpg')",
+        bejelentkezes: "url('/images/bejelentkezes.jpg')",
+        training_gif: "url('/images/training_gif.gif')",
       },
       colors: {
         "nk-white": "#EDEDED",

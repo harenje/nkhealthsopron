@@ -75,7 +75,7 @@ export default function FirstFeatureSection() {
             viewport={{ once: true, amount: 0.8 }}
           >
             <Image
-              src={"/../public/static/images/feature2.jpg"}
+              src={"/images/feature2.jpg"}
               alt="About Us Image"
               width={3000}
               height={3000}
@@ -94,7 +94,7 @@ export default function FirstFeatureSection() {
           viewport={{ once: true, amount: 0.8 }}
         >
           <Image
-            src={"/../public/static/images/feature2_2nd.jpg"}
+            src={"/images/feature2_2nd.jpg"}
             alt="About Us Second Image"
             width={3650}
             height={4000}

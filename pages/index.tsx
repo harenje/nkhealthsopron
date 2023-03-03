@@ -16,7 +16,7 @@ export default function Home() {
           name="description"
           content="Személyi edzés Sopronban, a város egyik leginnovatívabb edzőtermében. NK Health & Sport stúdió vár minden kedves edzeni vágyót"
         />
-        <link rel="icon" href="public/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <HeroLayout>
         <Hero />

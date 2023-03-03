@@ -58,7 +58,7 @@ export default function Navbar() {
               transition={{ type: "spring", stiffness: 350 }}
             >
               <Image
-                src="/images/logofeher.png"
+                src="/logofeher.png"
                 height={144}
                 width={144}
                 alt="Brand Logo"

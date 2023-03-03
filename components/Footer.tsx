@@ -85,7 +85,7 @@ export default function Footer() {
           <h1 className="text-2xl md:text-3xl">Elérhetőségek</h1>
           <div className="text-sm md:text-lg xl:text-xl relative">
             <Image
-              src="/../public/static/images/map.ico"
+              src="/images/map.ico"
               alt="Map Icon"
               width={32}
               height={32}
@@ -95,7 +95,7 @@ export default function Footer() {
           </div>
           <div className="text-sm md:text-lg xl:text-xl relative">
             <Image
-              src="/../public/static/images/phone.ico"
+              src="/images/phone.ico"
               alt="Map Icon"
               width={32}
               height={32}
@@ -109,7 +109,7 @@ export default function Footer() {
           </div>
           <div className="text-sm md:text-lg xl:text-xl relative">
             <Image
-              src="/../public/static/images/email.ico"
+              src="/images/email.ico"
               alt="Map Icon"
               width={32}
               height={32}
@@ -130,7 +130,7 @@ export default function Footer() {
               target={"_blank"}
             >
               <Image
-                src="/../public/static/images/facebook.ico"
+                src="/images/facebook.ico"
                 alt="Map Icon"
                 width={32}
                 height={32}
@@ -143,7 +143,7 @@ export default function Footer() {
               target={"_blank"}
             >
               <Image
-                src="/../public/static/images/instagram.ico"
+                src="/images/instagram.ico"
                 alt="Map Icon"
                 width={32}
                 height={32}
@@ -151,7 +151,7 @@ export default function Footer() {
               />
             </a>
             <Image
-              src="/../public/static/images/tiktok.ico"
+              src="/images/tiktok.ico"
               alt="Map Icon"
               width={32}
               height={32}
