@@ -12,10 +12,7 @@ module.exports = {
       backgroundImage: {
         logo_image: "url('../public/images/middle3.jpg')",
         "hero-pattern_2048": "url('../public/images/background.jpg')",
-        "hero-pattern_360": "url('../public/images/background_360x800.jpg')",
         "hero-pattern_768": "url('../public/images/background_1_768x1024.jpg')",
-        "hero-pattern_1280":
-          "url('../public/images/background_1_1280x720.jpg')",
         rolunk_bg: "url('../public/images/feature2bg.jpg')",
         rolunk_2048: "url('../public/images/feature2.jpg')",
         rolunk_768: "url('../public/images/feature2_768.jpg')",
