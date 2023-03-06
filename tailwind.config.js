@@ -3,9 +3,7 @@ const Image = require("next/image");
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
 const backgroundImage = (imageUrl) => ({
-  backgroundImage: `url(${Image.loader(imageUrl, {
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-  })})`,
+  backgroundImage: `url(${Image(imageUrl)}`,
 });
 
 /** @type {import('tailwindcss').Config} */
