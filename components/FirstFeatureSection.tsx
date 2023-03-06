@@ -130,26 +130,5 @@ export default function FirstFeatureSection() {
         </motion.div>
       </section>
     </>
-    // <div className="flex">
-    //   <div className="p-5 max-w-sm text-nk-black flex flex-col space-y-5">
-    //     <h1 className="text-4xl font-bold uppercase lg:pt-16">rólunk</h1>
-    //     <span className="text-xl">
-    //       Azért vagyunk, hogy segítsünk elérni a legjobb formádat.
-    //     </span>
-    //     <span className="text-xl">
-    //       Kvalifikált személyi edzők vagyunk, professzionális múlttal, több éves
-    //       szakmai tapasztalattal.
-    //     </span>
-    //     <span className="text-xl">
-    //       Nálunk fejlett eszközökkel, mindig megújuló tervekkel dolgozhatsz,
-    //       mindezeket lendületesen és vidám hangulatban.
-    //     </span>
-    //     <div className="self-start">
-    //       <Link href="/edzok">
-    //         <Button>edzőink</Button>
-    //       </Link>
-    //     </div>
-    //   </div>
-    // </div>
   );
 }
