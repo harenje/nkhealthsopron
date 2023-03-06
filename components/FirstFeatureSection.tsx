@@ -79,6 +79,7 @@ export default function FirstFeatureSection() {
               alt="About Us Image"
               width={3000}
               height={3000}
+              priority={true}
               className="self-stretch"
             ></Image>
           </motion.div>
@@ -98,6 +99,7 @@ export default function FirstFeatureSection() {
             alt="About Us Second Image"
             width={3650}
             height={4000}
+            priority={true}
             className="self-stretch"
           ></Image>
         </motion.div>
