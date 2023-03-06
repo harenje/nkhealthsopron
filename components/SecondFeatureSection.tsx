@@ -26,6 +26,7 @@ export default function SecondFeatureSection() {
         src="/images/training_gif.gif"
         width={4500}
         height={4000}
+        priority={true}
         alt="Training Video"
       ></Image>
       <motion.div
