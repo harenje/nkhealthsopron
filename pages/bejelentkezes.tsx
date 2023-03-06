@@ -16,7 +16,7 @@ const Bejelentkezes: NextPage = () => {
 
   return (
     <>
-      <section className="h-screen w-full bg-bejelentkezes bg-cover bg-center bg-fixed">
+      <section className="h-screen w-full bg-bejelentkezes bg-cover bg-center lg:bg-fixed">
         <Navbar />
         <motion.h1
           className="text-4xl lg:text-6xl text-nk-white uppercase font-bold text-center mt-10 tracking-widest"
