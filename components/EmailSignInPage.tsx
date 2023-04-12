@@ -1,28 +1,22 @@
+import { motion } from "framer-motion";
+import Navbar from "./Navbar";
+import Button from "./Button";
 import type {
   GetServerSidePropsContext,
   InferGetServerSidePropsType,
 } from "next";
 import { getCsrfToken } from "next-auth/react";
-import { motion } from "framer-motion";
-import Navbar from "../components/Navbar";
-import { useSession } from "next-auth/react";
-import Button from "../components/Button";
 
-import Dashboard from "../components/Dashboard";
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const csrfToken = await getCsrfToken(context);
+  return {
+    props: { csrfToken },
+  };
+}
 
-export default function SignIn({
+const EmailSignInPage = ({
   csrfToken,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  const { data: session } = useSession();
-
-  if (session) {
-    return (
-      <>
-        <Dashboard userName={session.user?.email ?? ""} />
-      </>
-    );
-  }
-
+}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return (
     <section className="h-screen w-full bg-bejelentkezes bg-cover bg-center md:bg-fixed">
       <Navbar />
@@ -73,11 +67,6 @@ export default function SignIn({
       </div>
     </section>
   );
-}
+};
 
-export async function getServerSideProps(context: GetServerSidePropsContext) {
-  const csrfToken = await getCsrfToken(context);
-  return {
-    props: { csrfToken },
-  };
-}
+export default EmailSignInPage;

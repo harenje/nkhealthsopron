@@ -35,3 +35,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+#firebase sdk
+nksport-205b6-firebase-adminsdk-j2zhg-ce01211eb7.json

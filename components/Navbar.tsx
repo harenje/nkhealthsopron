@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import useScreenSize from "../hooks/useScreenSize";
+import { useSession, getSession } from "next-auth/react";
 
 import { FiMenu } from "react-icons/fi";
 import { FiXSquare } from "react-icons/fi";
@@ -44,6 +45,9 @@ export default function Navbar() {
     closed: { opacity: 0, x: "-100%" },
     exit: { opacity: 0, x: "-100%" },
   };
+
+  const { data: session } = useSession();
+  
 
   return (
     <>
@@ -116,10 +120,10 @@ export default function Navbar() {
               </Link>
 
               <Link
-                href="/bejelentkezes"
+                href={session ? "/bejelentkezes" : "/api/auth/signin"}
                 className="transition-all hover:scale-150 duration-300"
               >
-                Bejelentkezés
+                {session ? `Profilom` : "Bejelentkezés"}
               </Link>
             </div>
           )}
@@ -171,10 +175,10 @@ export default function Navbar() {
               </Link>
 
               <Link
-                href="/bejelentkezes"
-                className="transition-all hover:scale-y-110 duration-300 delay-100"
+                href={session ? "/bejelentkezes" : "/api/auth/signin"}
+                className="transition-all hover:scale-150 duration-300"
               >
-                Bejelentkezés
+                {session ? `Profilom` : "Bejelentkezés"}
               </Link>
             </motion.nav>
           </motion.div>

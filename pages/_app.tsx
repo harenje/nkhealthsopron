@@ -1,6 +1,9 @@
 import React from "react";
 import { useScrollRestoration } from "../hooks/useScrollRestoration";
 
+// Next - auth
+import { SessionProvider } from "next-auth/react";
+
 // Framer - motion
 import { AnimatePresence } from "framer-motion";
 
@@ -21,7 +24,9 @@ export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <main className={`${roboto.variable} font-sans`}>
       <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
-        <Component {...pageProps} key={router.asPath} />
+        <SessionProvider session={pageProps.session}>
+          <Component {...pageProps} key={router.asPath} />
+        </SessionProvider>
       </AnimatePresence>
     </main>
   );
