@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        xxs: "0.6rem",
+      },
       screens: {},
       backgroundImage: {
         logo_image: "url('/images/middle3.jpg')",
@@ -17,6 +20,8 @@ module.exports = {
         rolunk_second: "url('/images/feature2_2nd.jpg')",
         bejelentkezes: "url('/images/bejelentkezes.png')",
         training_gif: "url('/images/training_gif.gif')",
+        signin_image: "url('/signin.png')",
+        signedin_image: "url('/signedin.png')",
       },
       colors: {
         "nk-white": "#EDEDED",

@@ -28,9 +28,9 @@ export default function FirstFeatureSection() {
   return (
     <>
       <section className="">
-        <div className="text-nk-black flex flex-col lg:items-center lg:flex-row">
+        <div className="flex flex-col text-nk-black lg:flex-row lg:items-center">
           <motion.div
-            className="ml-5 my-5 xl:my-0 lg:mr-2"
+            className="my-5 ml-5 lg:mr-2 xl:my-0"
             variants={cardVariants}
             exit="exit"
             initial={{ x: -300 }}
@@ -43,12 +43,12 @@ export default function FirstFeatureSection() {
             }}
             viewport={{ once: true }}
           >
-            <h1 className="flex flex-col text-4xl 2xl:text-5xl font-bold uppercase mb-5">
+            <h1 className="mb-5 flex flex-col text-4xl font-bold uppercase 2xl:text-5xl">
               <span>kik</span> <span>vagyunk</span>
             </h1>
-            <span className="text-lg 2xl:text-xl min-[1920px]:text-2xl tracking-widest">
+            <span className="text-lg tracking-widest 2xl:text-xl min-[1920px]:text-2xl">
               Mi segítünk elérni a{" "}
-              <strong className="text-nk-red uppercase">legjobb</strong>{" "}
+              <strong className="uppercase text-nk-red">legjobb</strong>{" "}
               formádat.
             </span>
             <br></br>
@@ -84,7 +84,7 @@ export default function FirstFeatureSection() {
           </motion.div>
         </div>
       </section>
-      <section className="flex flex-col-reverse text-nk-black items-center lg:flex-row">
+      <section className="flex flex-col-reverse items-center text-nk-black lg:flex-row">
         <motion.div
           className="flex self-stretch"
           variants={cardVariants}
@@ -102,7 +102,7 @@ export default function FirstFeatureSection() {
           ></Image>
         </motion.div>
         <motion.div
-          className="flex flex-col justify-center ml-5 my-5 xl:my-0 lg:mr-2"
+          className="my-5 ml-5 flex flex-col justify-center lg:mr-2 xl:my-0"
           variants={cardVariants}
           exit="exit"
           initial={{ x: 300 }}
@@ -114,7 +114,7 @@ export default function FirstFeatureSection() {
           }}
           viewport={{ once: true }}
         >
-          <h1 className="text-4xl 2xl:text-5xl font-bold uppercase mb-5 tracking-widest">
+          <h1 className="mb-5 text-4xl font-bold uppercase tracking-widest 2xl:text-5xl">
             alakítsd a tested, erősítsd az elméd
           </h1>
           <p className="text-lg 2xl:text-xl min-[1920px]:text-2xl">

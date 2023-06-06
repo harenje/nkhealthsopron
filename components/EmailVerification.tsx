@@ -5,9 +5,9 @@ import { signOut } from "next-auth/react";
 
 const EmailVerification = (props: { text: string; button?: boolean }) => {
   return (
-    <div className="w-screen h-screen bg-nk-grey flex items-center justify-center">
+    <div className="flex h-screen w-screen items-center justify-center bg-nk-grey">
       <motion.div
-        className="bg-nk-black rounded-md flex flex-col items-center p-5 mx-5 sm:w-1/2 lg:w-1/3 2xl:w-1/4"
+        className="mx-5 flex flex-col items-center rounded-md bg-nk-black p-5 sm:w-1/2 lg:w-1/3 2xl:w-1/4"
         initial={{ x: 300, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: 300, opacity: 0 }}
@@ -18,11 +18,11 @@ const EmailVerification = (props: { text: string; button?: boolean }) => {
         }}
       >
         <Image src="/logofeher.png" alt="Logo" width={200} height={100}></Image>
-        <h1 className="text-nk-white text-xl mb-5 text-center">{props.text}</h1>
+        <h1 className="mb-5 text-center text-xl text-nk-white">{props.text}</h1>
         {props.button && (
           <Button onClick={() => signOut()}>Kijelentkezés</Button>
         )}
-        <p className="text-nk-grey mt-5">NK Health & Sport Stúdió</p>
+        <p className="mt-5 text-nk-grey">NK Health & Sport Stúdió</p>
       </motion.div>
     </div>
   );

@@ -10,24 +10,24 @@ const Edzesek = () => {
       <section className="h-full w-full bg-nk-black">
         <Navbar />
         <Layout>
-          <div className="container mx-auto py-5 flex flex-col items-center lg:items-start">
-            <h1 className="text-4xl uppercase text-nk-white font-bold ml-2">
+          <div className="container mx-auto flex flex-col items-center py-5 lg:items-start">
+            <h1 className="ml-2 text-4xl font-bold uppercase text-nk-white">
               edzések
             </h1>
-            <hr className="border-nk-red border-solid border-2 rounded-md w-[9.5rem] lg:w-24 ml-2" />
+            <hr className="ml-2 w-[9.5rem] rounded-md border-2 border-solid border-nk-red lg:w-24" />
           </div>
-          <div className="w-full container mx-auto">
+          <div className="container mx-auto w-full">
             <div className="flex flex-col xl:flex-row xl:items-center">
-              <div className="flex flex-col mb-5 mr-5 ml-2">
+              <div className="mb-5 mr-5 ml-2 flex flex-col">
                 <motion.h1
-                  className="text-2xl font-bold text-nk-white mb-5 self-center"
+                  className="mb-5 self-center text-2xl font-bold text-nk-white"
                   initial={{ x: -300, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.4 }}
                 >
                   Sportolók fejlesztése
                 </motion.h1>
-                <p className="text-lg text-nk-white font-light leading-relaxed">
+                <p className="text-lg font-light leading-relaxed text-nk-white">
                   Egyéni edzéstervekkel dolgozunk, melyeket progresszíven
                   állítunk össze. Fő célkitűzéseink az állóképesség, a gyorsaság
                   és a robbanékonyság fejlesztése, valamint ezekhez szükséges
@@ -49,10 +49,10 @@ const Edzesek = () => {
                 sizes="(max-width: 1024px) 80vw,
               (max-width: 1200px) 100vw
               "
-                className="mb-2 md:ml-2 lg:mr-2 md:pr-4 md:w-full xl:w-[700px] xl:pr-0"
+                className="mb-2 md:ml-2 md:w-full md:pr-4 lg:mr-2 xl:w-[700px] xl:pr-0"
               ></Image>
             </div>
-            <div className="flex flex-col-reverse xl:flex-row xl:items-center mt-5 mb-2">
+            <div className="mt-5 mb-2 flex flex-col-reverse xl:flex-row xl:items-center">
               <Image
                 src="/images/edzeskkep2.jpg"
                 alt="Trainer with Client"
@@ -61,18 +61,18 @@ const Edzesek = () => {
                 sizes="(max-width: 1024px) 80vw,
               (max-width: 1200px) 100vw,
               "
-                className="md:ml-2 lg:mr-2 md:pr-4 md:w-full xl:w-[700px] xl:pr-0"
+                className="md:ml-2 md:w-full md:pr-4 lg:mr-2 xl:w-[700px] xl:pr-0"
               ></Image>
-              <div className="flex flex-col mb-5 ml-2">
+              <div className="mb-5 ml-2 flex flex-col">
                 <motion.h1
-                  className="text-2xl font-bold text-nk-white mb-5 self-center"
+                  className="mb-5 self-center text-2xl font-bold text-nk-white"
                   initial={{ x: -300, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.4 }}
                 >
                   Személyi edzés
                 </motion.h1>
-                <p className="text-lg text-nk-white font-light leading-relaxed">
+                <p className="text-lg font-light leading-relaxed text-nk-white">
                   Személyi edzés szolgáltatásunk mindenki számára elérhető, aki
                   egészségét megőrizni, testsúlyát csökkenteni vagy izomtömegét
                   növelni szeretné, valamint az egészséges életmódra törekszik.

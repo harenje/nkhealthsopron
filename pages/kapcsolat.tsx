@@ -7,10 +7,10 @@ import { motion } from "framer-motion";
 const Kapcsolat = () => {
   return (
     <>
-      <section className="bg-nk-black h-full">
+      <section className="h-full bg-nk-black">
         <Navbar />
         <div className="container mx-auto flex flex-col lg:flex-row lg:justify-between">
-          <div className="text-nk-white flex flex-col gap-10 p-5">
+          <div className="flex flex-col gap-10 p-5 text-nk-white">
             <motion.div
               className="flex flex-col items-center lg:items-start"
               initial={{ x: 300, opacity: 0 }}
@@ -22,10 +22,10 @@ const Kapcsolat = () => {
                 damping: 30,
               }}
             >
-              <h1 className="text-4xl text-nk-white font-bold uppercase">
+              <h1 className="text-4xl font-bold uppercase text-nk-white">
                 kapcsolat
               </h1>
-              <hr className="border-nk-red border-solid border-2 rounded-md w-52 lg:w-36"></hr>
+              <hr className="w-52 rounded-md border-2 border-solid border-nk-red lg:w-36"></hr>
             </motion.div>
             <motion.div
               className="flex gap-2"
@@ -87,7 +87,7 @@ const Kapcsolat = () => {
           </div>
           <motion.div
             id="map"
-            className="border rounded mb-5 mx-2"
+            className="mx-2 mb-5 rounded border"
             initial={{ x: 300, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: 300, opacity: 0 }}
@@ -98,7 +98,7 @@ const Kapcsolat = () => {
             }}
           >
             <iframe
-              className="w-full h-[400px] lg:w-[720px] lg:h-[600px] xl:w-[920px]"
+              className="h-[400px] w-full lg:h-[600px] lg:w-[720px] xl:w-[920px]"
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
@@ -107,12 +107,12 @@ const Kapcsolat = () => {
           </motion.div>
         </div>
         <Layout>
-          <div className="flex flex-col items-center p-5 gap-10">
+          <div className="flex flex-col items-center gap-10 p-5">
             <div className="flex flex-col items-center lg:items-start">
-              <h1 className="text-4xl text-nk-white font-bold uppercase">
+              <h1 className="text-4xl font-bold uppercase text-nk-white">
                 megközelítés
               </h1>
-              <hr className="border-nk-red border-solid border-2 rounded-md w-[16.5rem] lg:w-52"></hr>
+              <hr className="w-[16.5rem] rounded-md border-2 border-solid border-nk-red lg:w-52"></hr>
             </div>
             <ul className="tracking-widest text-nk-white">
               <motion.li
@@ -126,7 +126,7 @@ const Kapcsolat = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <span className="text-nk-red mr-3">&#10132;</span>
+                <span className="mr-3 text-nk-red">&#10132;</span>
                 soproni helyijáratos 5, 5A, 5T, 5Y, 4, 22 buszokkal Győri út,
                 autómosó megálló
               </motion.li>
@@ -140,7 +140,7 @@ const Kapcsolat = () => {
                 }}
                 viewport={{ once: true }}
               >
-                <span className="text-nk-red mr-3">&#10132;</span>parkolás
+                <span className="mr-3 text-nk-red">&#10132;</span>parkolás
                 ingyenes
               </motion.li>
             </ul>

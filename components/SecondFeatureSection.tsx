@@ -18,7 +18,7 @@ const cardVariants: Variants = {
 export default function SecondFeatureSection() {
   return (
     <motion.section
-      className="bg-nk-black relative flex items-center justify-center overflow-hidden"
+      className="relative flex items-center justify-center overflow-hidden bg-nk-black"
       variants={cardVariants}
       exit="exit"
     >
@@ -30,12 +30,12 @@ export default function SecondFeatureSection() {
         alt="Training Video"
       ></Image>
       <motion.div
-        className="bg-nk-black bg-opacity-75 w-full h-full absolute text-md top-0 left-0 text-xs md:text-sm lg:text-md xl:text-xl min-[1920px]:text-2xl flex flex-col justify-center items-center"
+        className="text-md lg:text-md absolute top-0 left-0 flex h-full w-full flex-col items-center justify-center bg-nk-black bg-opacity-75 text-xs md:text-sm xl:text-xl min-[1920px]:text-2xl"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
       >
-        <div className="w-10/12 h-1/4 text-nk-white mb-16 md:mb-6 lg:mb-0 uppercase text-center">
+        <div className="mb-16 h-1/4 w-10/12 text-center uppercase text-nk-white md:mb-6 lg:mb-0">
           A személyi edzőink segítenek Önnek megtalálni a legjobb edzéstervet
           céljai eléréséhez. Ha bármilyen kérdése van az edzési módszerekről,
           forduljon hozzánk bizalommal vagy kattintson az edzések gombra.

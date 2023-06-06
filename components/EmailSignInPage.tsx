@@ -21,7 +21,7 @@ const EmailSignInPage = ({
     <section className="h-screen w-full bg-bejelentkezes bg-cover bg-center md:bg-fixed">
       <Navbar />
       <motion.h1
-        className="text-4xl lg:text-6xl text-nk-white uppercase font-bold text-center mt-10 tracking-widest"
+        className="mt-10 text-center text-4xl font-bold uppercase tracking-widest text-nk-white lg:text-6xl"
         initial={{ x: 300, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: 300, opacity: 0 }}
@@ -35,7 +35,7 @@ const EmailSignInPage = ({
       </motion.h1>
       <div className="flex justify-center">
         <motion.div
-          className="mx-5 py-5 min-w-2/4 min-h-5/6 bg-nk-white opacity-90 rounded-sm flex justify-center items-center mt-10"
+          className="min-w-2/4 min-h-5/6 mx-5 mt-10 flex items-center justify-center rounded-sm bg-nk-white py-5 opacity-90"
           initial={{ x: 300, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: 300, opacity: 0 }}
@@ -46,15 +46,15 @@ const EmailSignInPage = ({
           }}
         >
           <form
-            className="px-4 flex justify-center items-center flex-col"
+            className="flex flex-col items-center justify-center px-4"
             method="post"
             action="/api/auth/signin/email"
           >
-            <h1 className="text-center text-xl text-nk-grey font-bold mb-5">
+            <h1 className="mb-5 text-center text-xl font-bold text-nk-grey">
               Üdvözöllek az NK Health & Sport online bejelentkező felületén,
               folytatáshoz kérlek lépj be!
             </h1>
-            <div className="flex flex-col gap-2 justify-center">
+            <div className="flex flex-col justify-center gap-2">
               <input name="csrfToken" type="hidden" defaultValue={csrfToken} />
               <label className="self-center" htmlFor="email">
                 E-mail cím
