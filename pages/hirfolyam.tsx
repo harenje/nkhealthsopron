@@ -1,9 +1,24 @@
-import type { NextPage } from "next";
+import type { NextPage, GetStaticProps } from "next";
 
 import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
 
-const Hirfolyam: NextPage = ({ feed }: any) => {
+type Media = {
+  id: string;
+  caption: string;
+  media_url: string;
+  timestamp: string;
+  media_type: string;
+  permalink: string;
+};
+
+type Props = {
+  feed: {
+    data: Media[];
+  };
+};
+
+const Hirfolyam: NextPage<Props> = ({ feed }) => {
   const images = feed.data;
   return (
     <>
@@ -61,11 +76,30 @@ const Hirfolyam: NextPage = ({ feed }: any) => {
 {
 }
 
-export const getStaticProps = async () => {
-  const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTAGRAM_KEY}`;
-  const data = await fetch(url);
-  const feed = await data.json();
+export const getStaticProps: GetStaticProps = async () => {
+  try {
+    const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTAGRAM_KEY}`;
+    const response = await fetch(url);
 
-  return { props: { feed } };
+    if (!response.ok) {
+      throw new Error(
+        `Failed to fetch from Instagram. Status: ${response.status}`
+      );
+    }
+
+    const feed = await response.json();
+    console.log(feed);
+
+    return { props: { feed } };
+  } catch (error: any) {
+    console.error("Error fetching Instagram data:", error.message);
+    return {
+      props: {
+        feed: {
+          data: [],
+        },
+      },
+    };
+  }
 };
 export default Hirfolyam;
