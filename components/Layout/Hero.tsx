@@ -13,14 +13,14 @@ export default function Hero() {
       </header>
       {/* HERO MAIN */}
       <Layout>
-        <section className="h-5/6 flex flex-col gap-10 justify-evenly container mx-auto">
+        <section className="container mx-auto flex h-5/6 flex-col justify-evenly gap-10">
           <motion.div
-            className="px-1.5 lg:px-0 md:self-center md:text-center lg:text-start lg:self-start"
+            className="px-1.5 md:self-center md:text-center lg:self-start lg:px-0 lg:text-start"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-6xl sm:text-8xl 2xl:text-9xl text-nk-white uppercase tracking-widest">
+            <h1 className="text-6xl uppercase tracking-widest text-nk-white sm:text-8xl 2xl:text-9xl">
               Érjük el a céljaid együtt
             </h1>
           </motion.div>
@@ -30,7 +30,7 @@ export default function Hero() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <Link href="/bejelentkezes" scroll={false}>
+            <Link href="/kapcsolat" scroll={false}>
               <Button>kezdd el most</Button>
             </Link>
           </motion.div>

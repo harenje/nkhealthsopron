@@ -3,27 +3,37 @@ import Footer from "../components/Footer";
 import Layout from "../components/Animation/Layout";
 import { motion } from "framer-motion";
 
+const enterAnimation = {
+  initial: { x: 300, opacity: 0 },
+  animate: { x: 0, opacity: 1 },
+  exit: { x: 300, opacity: 0 },
+  transition: {
+    type: "spring",
+    stiffness: 360,
+    damping: 30,
+  },
+};
+
+const zoomAnimation = {
+  animate: {
+    scale: [1, 1.05, 1],
+  },
+};
+
 const Arak = () => {
   return (
     <>
-      <section className="bg-nk-black h-full p-5 overflow-hidden">
+      <section className="h-full overflow-hidden bg-nk-black p-5">
         <Navbar />
         <motion.div
           className="container mx-auto flex flex-col"
-          initial={{ x: 300, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          exit={{ x: 300, opacity: 0 }}
-          transition={{
-            type: "spring",
-            stiffness: 360,
-            damping: 30,
-          }}
+          {...enterAnimation}
         >
-          <h1 className="text-4xl font-bold text-nk-white uppercase mb-2 self-center lg:self-start">
+          <h1 className="mb-2 self-center text-4xl font-bold uppercase text-nk-white lg:self-start">
             áraink
           </h1>
-          <hr className="border-nk-red border-solid border-2 rounded-md w-32 self-center lg:w-24 lg:self-start" />
-          <h2 className="uppercase text-2xl text-nk-white tracking-widest mt-5 text-center lg:text-start">
+          <hr className="w-32 self-center rounded-md border-2 border-solid border-nk-red lg:w-24 lg:self-start" />
+          <h2 className="mt-5 text-center text-2xl uppercase tracking-widest text-nk-white lg:text-start">
             a legjobb verziód itt készül
           </h2>
         </motion.div>
@@ -34,66 +44,20 @@ const Arak = () => {
               díjmentes találkozón, ahol rólad, a te céljaidról, terveidről lesz
               szó. Átbeszéljük, milyen típusú edzésmód lenne számodra ideális.
             </p>
-            <hr className="border-nk-red border-solid border-2 rounded-md w-36 mt-2" />
+            <hr className="mt-2 w-36 rounded-md border-2 border-solid border-nk-red" />
           </div>
         </Layout>
         <Layout>
-          <div className="container mx-auto flex flex-col lg:flex-row mt-5 text-nk-black tracking-widest gap-10">
+          <div className="container mx-auto mt-5 flex flex-col gap-10 tracking-widest text-nk-black lg:flex-row">
             <motion.div
-              className="w-full bg-white bg-logo_image bg-center bg-cover rounded-md flex flex-col items-center p-3"
-              animate={{
-                scale: [1, 1.05, 1],
-              }}
+              className="flex w-full flex-col items-center rounded-md bg-white bg-logo_image bg-contain bg-center p-3"
+              {...zoomAnimation}
             >
-              <h2 className="uppercase  font-semibold p-2">személyi edzés</h2>
-              <h1 className="uppercase text-xl font-extrabold mb-1 py-3">
+              <h3 className="p-2  font-semibold uppercase">személyi edzés</h3>
+              <h4 className="mb-1 py-3 text-xl font-extrabold uppercase">
                 egyéni
-              </h1>
-              <div className="max-[320px]:text-center">
-                <div className="mb-5 font-semibold tracking-[.24em]">
-                  6000.-Ft / fő /{" "}
-                  <span className="text-nk-red font-bold">1</span> alkalom
-                  <hr className="border-nk-red border-solid rounded-md w-10 max-[320px]:hidden" />
-                </div>
-                <div className="mb-5 font-semibold tracking-[.24em]">
-                  44000.-Ft / fő /{" "}
-                  <span className="text-nk-red font-bold">8</span> alkalom
-                  <hr className="border-nk-red border-solid rounded-md w-10 max-[320px]:hidden" />
-                </div>
-                <div className="mb-5 font-semibold tracking-[.24em]">
-                  80000.-Ft / fő /{" "}
-                  <span className="text-nk-red font-bold">16</span> alkalom
-                  <hr className="border-nk-red border-solid rounded-md w-10 max-[320px]:hidden" />
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              className="w-full bg-white bg-logo_image bg-center bg-cover rounded-md flex flex-col items-center p-3"
-              animate={{
-                scale: [1, 1.05, 1],
-              }}
-            >
-              <h2 className="uppercase  font-semibold p-2">személyi edzés</h2>
-              <h1 className="uppercase text-xl font-extrabold mb-1 py-3">
-                páros
-              </h1>
-              <div className="max-[320px]:text-center">
-                <div className="mb-5 font-semibold tracking-[.24em]">
-                  5400.-Ft / fő /{" "}
-                  <span className="text-nk-red font-bold">1</span> alkalom
-                  <hr className="border-nk-red border-solid rounded-md w-10 max-[320px]:hidden" />
-                </div>
-                <div className="mb-5 font-semibold tracking-[.24em]">
-                  40000.-Ft / fő /{" "}
-                  <span className="text-nk-red font-bold">8</span> alkalom
-                  <hr className="border-nk-red border-solid rounded-md w-10 max-[320px]:hidden" />
-                </div>
-                <div className="mb-5 font-semibold tracking-[.24em]">
-                  72000.-Ft / fő /{" "}
-                  <span className="text-nk-red font-bold">16</span> alkalom
-                  <hr className="border-nk-red border-solid rounded-md w-10 max-[320px]:hidden" />
-                </div>
-              </div>
+              </h4>
+              <PricingDetails />
             </motion.div>
           </div>
         </Layout>
@@ -104,5 +68,25 @@ const Arak = () => {
     </>
   );
 };
+
+const PricingDetails = () => (
+  <div className="max-[320px]:text-center">
+    <SinglePricing amount="7000.-Ft" session="1" />
+    <SinglePricing amount="65000.-Ft" session="10" />
+  </div>
+);
+
+interface SinglePricingProps {
+  amount: string;
+  session: string;
+}
+
+const SinglePricing: React.FC<SinglePricingProps> = ({ amount, session }) => (
+  <div className="mb-5 font-semibold tracking-[.24em]">
+    {amount} / fő /<span className="font-bold text-nk-red">{session}</span>{" "}
+    alkalom
+    <hr className="w-10 rounded-md border-solid border-nk-red max-[320px]:hidden" />
+  </div>
+);
 
 export default Arak;

@@ -62,14 +62,14 @@ export default function Navbar() {
                 height={144}
                 width={144}
                 alt="Brand Logo"
-                className="2xl:scale-125 transition-all duration-300 delay-100"
+                className="transition-all delay-100 duration-300 2xl:scale-125"
               ></Image>
             </motion.div>
           </Link>
           {/* Hamburger Icon */}
           {!open ? (
             <FiMenu
-              className="transition-all duration-300 delay-100 mr-2.5 block lg:hidden hover:scale-150 cursor-pointer"
+              className="mr-2.5 block cursor-pointer transition-all delay-100 duration-300 hover:scale-150 lg:hidden"
               size="2.5em"
               onClick={() => {
                 disableScrollFunc();
@@ -77,7 +77,7 @@ export default function Navbar() {
             />
           ) : (
             <FiXSquare
-              className="transition-all duration-300 delay-100 hover:scale-150 mr-2.5 block lg:hidden cursor-pointer z-50"
+              className="z-50 mr-2.5 block cursor-pointer transition-all delay-100 duration-300 hover:scale-150 lg:hidden"
               size="2.5em"
               onClick={() => {
                 enableScrollFunc();
@@ -86,40 +86,40 @@ export default function Navbar() {
           )}
           {/*Menu Items */}
           {width >= breakpoint && (
-            <div className="hidden 2xl:text-xl lg:space-x-32 lg:flex lg:flex-row lg:mt-0 lg:mr-0">
+            <div className="hidden lg:mt-0 lg:mr-0 lg:flex lg:flex-row lg:space-x-32 2xl:text-xl">
               <Link
                 href="/edzesek"
-                className="transition-all hover:scale-150 duration-300"
+                className="transition-all duration-300 hover:scale-150"
               >
                 Edzések
               </Link>
 
               <Link
                 href="/edzok"
-                className="transition-all hover:scale-150 duration-300"
+                className="transition-all duration-300 hover:scale-150"
               >
                 Edzők
               </Link>
 
               <Link
                 href="/arak"
-                className="transition-all hover:scale-150 duration-300"
+                className="transition-all duration-300 hover:scale-150"
               >
                 Árak
               </Link>
 
               <Link
                 href="/kapcsolat"
-                className="transition-all hover:scale-150 duration-300"
+                className="transition-all duration-300 hover:scale-150"
               >
                 Kapcsolat
               </Link>
 
               <Link
-                href="/bejelentkezes"
-                className="transition-all hover:scale-150 duration-300"
+                href="/hirfolyam"
+                className="transition-all duration-300 hover:scale-150"
               >
-                Bejelentkezés
+                Hírfolyam
               </Link>
             </div>
           )}
@@ -129,14 +129,14 @@ export default function Navbar() {
       <AnimatePresence>
         {open && width <= breakpoint && (
           <motion.div
-            className="absolute top-0 left-0 w-full h-full bg-nk-black text-nk-white text-4xl sm:text-5xl flex justify-center content-start opacity-95 overflow-hidden z-40"
+            className="absolute top-0 left-0 z-40 flex h-full w-full content-start justify-center overflow-hidden bg-nk-black text-4xl text-nk-white opacity-95 sm:text-5xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.95 }}
             transition={{ duration: 0.25 }}
             exit={{ opacity: 0 }}
           >
             <motion.nav
-              className="flex flex-col justify-center gap-20 h-full"
+              className="flex h-full flex-col justify-center gap-20"
               initial="closed"
               animate="open"
               exit="exit"
@@ -144,37 +144,37 @@ export default function Navbar() {
             >
               <Link
                 href="/edzesek"
-                className="transition-all hover:scale-y-110 duration-300 delay-100"
+                className="transition-all delay-100 duration-300 hover:scale-y-110"
               >
                 Edzések
               </Link>
 
               <Link
                 href="/edzok"
-                className="transition-all hover:scale-y-110 duration-300 delay-100"
+                className="transition-all delay-100 duration-300 hover:scale-y-110"
               >
                 Edzők
               </Link>
 
               <Link
                 href="/arak"
-                className="transition-all hover:scale-y-110 duration-300 delay-100"
+                className="transition-all delay-100 duration-300 hover:scale-y-110"
               >
                 Árak
               </Link>
 
               <Link
                 href="/kapcsolat"
-                className="transition-all hover:scale-y-110 duration-300 delay-100"
+                className="transition-all delay-100 duration-300 hover:scale-y-110"
               >
                 Kapcsolat
               </Link>
 
               <Link
                 href="/bejelentkezes"
-                className="transition-all hover:scale-y-110 duration-300 delay-100"
+                className="transition-all delay-100 duration-300 hover:scale-y-110"
               >
-                Bejelentkezés
+                Hírfolyam
               </Link>
             </motion.nav>
           </motion.div>
