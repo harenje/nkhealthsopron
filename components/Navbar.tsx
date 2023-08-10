@@ -171,7 +171,7 @@ export default function Navbar() {
               </Link>
 
               <Link
-                href="/bejelentkezes"
+                href="/hirfolyam"
                 className="transition-all delay-100 duration-300 hover:scale-y-110"
               >
                 Hírfolyam
