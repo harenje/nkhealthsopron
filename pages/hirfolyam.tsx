@@ -20,7 +20,6 @@ type Props = {
 
 const Hirfolyam: NextPage<Props> = ({ feed }) => {
   const images = feed.data;
-  console.log(images);
   return (
     <>
       <section className="h-full w-full bg-nk-black">
