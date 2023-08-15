@@ -10,10 +10,10 @@ import { motion } from "framer-motion";
 const Edzok = () => {
   return (
     <>
-      <section className="bg-nk-black h-full pb-20">
+      <section className="h-full bg-nk-black pb-20">
         <Navbar />
         <motion.div
-          className="container mx-auto flex flex-col items-center lg:items-start pb-20"
+          className="container mx-auto flex flex-col items-center pb-20 lg:items-start"
           initial={{ x: 300, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: 300, opacity: 0 }}
@@ -23,13 +23,13 @@ const Edzok = () => {
             damping: 30,
           }}
         >
-          <h1 className="text-4xl text-nk-white font-bold uppercase lg:ml-5 xl:ml-0">
+          <h1 className="text-4xl font-bold uppercase text-nk-white lg:ml-5 xl:ml-0">
             edzők
           </h1>
-          <hr className="border-nk-red border-solid border-2 rounded-md w-28 lg:w-16 lg:ml-5 xl:ml-0"></hr>
+          <hr className="w-28 rounded-md border-2 border-solid border-nk-red lg:ml-5 lg:w-16 xl:ml-0"></hr>
         </motion.div>
         <Layout>
-          <div className="text-nk-white grid grid-cols-1 gap-20 md:grid md:grid-cols-2 justify-items-center mx-5">
+          <div className="mx-5 grid grid-cols-1 justify-items-center gap-20 text-nk-white md:grid md:grid-cols-2">
             <Edzo
               alt="Trainer Kevin"
               description={
@@ -56,7 +56,7 @@ const Edzok = () => {
               }
               image={"/images/Kevin.jpg"}
               name="Varga Kevin"
-              role="személyi edző"
+              role="személyi edző / erőnléti edző"
             />
             <Edzo
               alt="Trainer Norbert"
@@ -166,7 +166,7 @@ function Edzo(props: EdzoProps) {
 
   return (
     <motion.div
-      className="flex flex-col basis-1/2 pb-10 relative"
+      className="relative flex basis-1/2 flex-col pb-10"
       animate={{
         scale: [1, 1.05, 1],
       }}
@@ -178,16 +178,16 @@ function Edzo(props: EdzoProps) {
         height={400}
         className="rounded-xl"
       ></Image>
-      <div className="mt-1 z-50">
+      <div className="z-50 mt-1">
         <Button onClick={infoToggleHandler}>Személyes leírás</Button>
       </div>
 
       <div
-        className={`bg-nk-grey rounded-xl cursor-default ${
+        className={`cursor-default rounded-xl bg-nk-grey ${
           infoToggler
-            ? "bg-opacity-80 transition-all duration-300 delay-100 text-xs 2xl:text-sm"
-            : "opacity-0 transition-all duration-300 delay-100"
-        } absolute top-1 left-2 right-2 p-1 flex flex-col gap-1 transition-all`}
+            ? "bg-opacity-80 text-xs transition-all delay-100 duration-300 2xl:text-sm"
+            : "opacity-0 transition-all delay-100 duration-300"
+        } absolute top-1 left-2 right-2 flex flex-col gap-1 p-1 transition-all`}
       >
         {props.description}
       </div>

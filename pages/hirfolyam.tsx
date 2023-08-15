@@ -20,6 +20,7 @@ type Props = {
 
 const Hirfolyam: NextPage<Props> = ({ feed }) => {
   const images = feed.data;
+  console.log(images);
   return (
     <>
       <section className="h-full w-full bg-nk-black">
@@ -88,9 +89,28 @@ export const getStaticProps: GetStaticProps = async () => {
     }
 
     const feed = await response.json();
-    console.log(feed);
 
-    return { props: { feed } };
+    const updatedFeedData = await Promise.all(
+      feed.data.map(async (post: Media) => {
+        const oEmbedUrl = `https://graph.facebook.com/v17.0/instagram_oembed?url=${encodeURIComponent(
+          post.permalink
+        )}&fields=thumbnail_url&access_token=${process.env.INSTAGRAM_KEY}`;
+        try {
+          const oEmbedResponse = await fetch(oEmbedUrl);
+          const oEmbedData = await oEmbedResponse.json();
+
+          if (oEmbedData.thumbnail_url) {
+            return { ...post, thumbnail_url: oEmbedData.thumbnail_url };
+          } else {
+            return { ...post, thumbnail_url: post.media_url };
+          }
+        } catch (error) {
+          return { ...post, thumbnail_url: post.media_url };
+        }
+      })
+    );
+
+    return { props: { feed: { data: updatedFeedData } } };
   } catch (error: any) {
     console.error("Error fetching Instagram data:", error.message);
     return {
