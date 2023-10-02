@@ -83,7 +83,6 @@ const Edzok = () => {
               name="Baranyai Norbert"
               role="személyi edző"
             />
-
             <Edzo
               alt="Trainer Adrienn"
               description={
@@ -106,13 +105,13 @@ const Edzok = () => {
                     táplálkozási tanácsadás -állóképesség fejlesztés
                     -funkcionális edzések -tartásjavítás
                   </span>
+                  <span>📞 Ivancsics Adrienn: +36304443563</span>
                 </>
               }
               image={"/images/Adrienn.jpg"}
               name="Ivancsics Adrienn"
               role="személyi edző"
             />
-
             <Edzo
               alt="Trainer Judit"
               description={
@@ -134,10 +133,34 @@ const Edzok = () => {
                     lift nem működik! Használd a lépcsőt! Lépésről lépésre…” -
                     Joe Girard
                   </span>
+                  <span>📞 Palotai-Fodor Judit: +36304070900</span>
                 </>
               }
               image={"/images/Judit.jpg"}
               name="Palotai-Fodor Judit"
+              role="személyi edző"
+            />
+
+            <Edzo
+              alt="Trainer Kincso"
+              description={
+                <>
+                  <span>
+                    Nagy örömömre szolgál, hogy mostmár én is az NK csapatát
+                    erősíthetem. Ha szeretnél te is belevágni az edzésbe, bátran
+                    keress és kihozzuk belőled a maximumot!💪🏽
+                  </span>{" "}
+                  <span>
+                    Jelenleg a Testnevelési Egyetem végzős hallgatója vagyok,
+                    valamint aktív erőemelő versenyző. A sport az életem része
+                    és szeretném átadni ezt Neked is.
+                  </span>
+                  <span>Ne halogass tovább, kezdd el még ma!😉</span>
+                  <span>📞 Gerencsér Kincső: +36308278496</span>
+                </>
+              }
+              image={"/images/Kincso.webp"}
+              name="Gerencsér Kincső"
               role="személyi edző"
             />
           </div>

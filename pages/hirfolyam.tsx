@@ -111,7 +111,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
     return { props: { feed: { data: updatedFeedData } } };
   } catch (error: any) {
-    console.error("Error fetching Instagasddddram data:", error.message);
+    console.error("Error fetching Instagasdddddram data:", error.message);
     return {
       props: {
         feed: {
