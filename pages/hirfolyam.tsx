@@ -83,7 +83,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
     if (!response.ok) {
       throw new Error(
-        `Failed to fetchaaaa from Instagram. Status: ${response.status}`
+        `Failed to fetchaaaaa from Instagram. Status: ${response.status}`
       );
     }
 
