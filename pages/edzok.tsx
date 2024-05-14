@@ -112,57 +112,9 @@ const Edzok = () => {
               name="Ivancsics Adrienn"
               role="személyi edző"
             />
-            <Edzo
-              alt="Trainer Judit"
-              description={
-                <>
-                  <span>
-                    Palotai-Fodor Juditnak hívnak, egy csodálatos eleven kislány
-                    édesanyja vagyok. Célom minél többet kihozni magamból, hogy
-                    ezáltal minden sportolni vágyónak segítséget tudjak
-                    nyújtani. A sport mindig is az életem része volt különböző
-                    formában. Kosárlabdáztam, művészi tornáztam…, sokféle
-                    sportban kipróbáltam magamat.
-                  </span>{" "}
-                  <span>
-                    Tanulmányaimat az IWI Nemzetközi Fitness Akadémián végeztem,
-                    a naprakész tudásomat folyamatos képzésekkel bővítem.
-                    Szeretnék mindenkit a mozgás örömére ösztönözni, és együtt
-                    haladni az úton. Férjem és családom támogatásával
-                    lehetőségem nyílt ennek továbbadására. “A sikerhez vezető
-                    lift nem működik! Használd a lépcsőt! Lépésről lépésre…” -
-                    Joe Girard
-                  </span>
-                  <span>📞 Palotai-Fodor Judit: +36304070900</span>
-                </>
-              }
-              image={"/images/Judit.jpg"}
-              name="Palotai-Fodor Judit"
-              role="személyi edző"
-            />
+           
 
-            <Edzo
-              alt="Trainer Kincso"
-              description={
-                <>
-                  <span>
-                    Nagy örömömre szolgál, hogy mostmár én is az NK csapatát
-                    erősíthetem. Ha szeretnél te is belevágni az edzésbe, bátran
-                    keress és kihozzuk belőled a maximumot!💪🏽
-                  </span>{" "}
-                  <span>
-                    Jelenleg a Testnevelési Egyetem végzős hallgatója vagyok,
-                    valamint aktív erőemelő versenyző. A sport az életem része
-                    és szeretném átadni ezt Neked is.
-                  </span>
-                  <span>Ne halogass tovább, kezdd el még ma!😉</span>
-                  <span>📞 Gerencsér Kincső: +36308278496</span>
-                </>
-              }
-              image={"/images/Kincso.webp"}
-              name="Gerencsér Kincső"
-              role="személyi edző"
-            />
+           
           </div>
         </Layout>
       </section>
